@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ExternalLink, Github, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
-import { mockData } from '../data/mock';
+import axios from 'axios';
 import {
   Dialog,
   DialogContent,
@@ -10,9 +10,28 @@ import {
   DialogTitle,
 } from './ui/dialog';
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
+
 const Projects = () => {
-  const { projects } = mockData;
+  const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
+
+  const fetchProjects = async () => {
+    try {
+      const response = await axios.get(`${API}/projects`);
+      setProjects(response.data);
+    } catch (error) {
+      console.error('Error fetching projects:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section id="projects" className="py-24 bg-[#0f1419] relative overflow-hidden">
