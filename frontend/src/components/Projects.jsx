@@ -33,6 +33,18 @@ const Projects = () => {
     }
   };
 
+  if (loading) {
+    return (
+      <section id="projects" className="py-24 bg-[#0f1419] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center">
+            <div className="animate-pulse text-[#00d9ff] text-lg">Loading projects...</div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="projects" className="py-24 bg-[#0f1419] relative overflow-hidden">
       {/* Background Accent */}
