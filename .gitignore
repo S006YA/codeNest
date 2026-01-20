@@ -34,8 +34,8 @@ dist
 # env files
 .env
 
-codeNest/frontend/.env
-codeNest/backend/.env
+/frontend/.env
+/backend/.env
 
 *token.json*
 *credentials.json*
