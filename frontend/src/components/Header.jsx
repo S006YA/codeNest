@@ -33,11 +33,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('hero')}>
             <img
-              src="https://customer-assets.emergentagent.com/job_codenest-hub/artifacts/1sy2kcgi_Gemini_Generated_Image_n6s2p6n6s2p6n6s2.png"
-              alt="codeNest Logo"
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='45' font-size='40' font-weight='bold' fill='%2300d9ff'%3EAeterna%3C/text%3E%3C/svg%3E"
+              alt="Aeterna stacK Logo"
               className="h-12 w-12 object-contain"
             />
-            <span className="text-2xl font-bold text-white tracking-tight">codeNest</span>
+            <span className="text-2xl font-bold text-white tracking-tight">Aeterna stacK</span>
           </div>
 
           {/* Desktop Navigation */}

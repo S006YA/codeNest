@@ -21,11 +21,11 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="https://customer-assets.emergentagent.com/job_codenest-hub/artifacts/1sy2kcgi_Gemini_Generated_Image_n6s2p6n6s2p6n6s2.png"
-                alt="codeNest Logo"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='45' font-size='40' font-weight='bold' fill='%2300d9ff'%3EAeterna%3C/text%3E%3C/svg%3E"
+                alt="Aeterna stacK Logo"
                 className="h-10 w-10 object-contain"
               />
-              <span className="text-xl font-bold text-white">codeNest</span>
+              <span className="text-xl font-bold text-white">Aeterna stacK</span>
             </div>
             <p className="text-gray-400 text-sm">
               Crafting beautiful and functional web experiences with modern technologies.
@@ -93,7 +93,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-[#00d9ff]/10">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} codeNest. All rights reserved.
+              © {currentYear} Aeterna stacK. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm flex items-center">
               Built with

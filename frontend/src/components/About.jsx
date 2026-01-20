@@ -24,7 +24,7 @@ const About = () => {
                   </div>
                   <div className="ml-6 space-y-2">
                     <p className="text-gray-300 font-mono text-sm">
-                      <span className="text-[#00ffc8]">name:</span> <span className="text-[#00d9ff]">'codeNest'</span>,
+                      <span className="text-[#00ffc8]">name:</span> <span className="text-[#00d9ff]">'Aeterna stacK'</span>,
                     </p>
                     <p className="text-gray-300 font-mono text-sm">
                       <span className="text-[#00ffc8]">role:</span> <span className="text-[#00d9ff]">'Frontend Developer'</span>,

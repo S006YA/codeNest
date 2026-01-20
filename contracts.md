@@ -1,4 +1,4 @@
-# Backend Integration Contracts - codeNest Portfolio
+# Backend Integration Contracts - Aeterna stacK Portfolio
 
 ## Overview
 Converting frontend mock data to full-stack application with MongoDB backend.

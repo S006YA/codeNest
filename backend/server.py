@@ -37,7 +37,7 @@ api_router = APIRouter(prefix="/api")
 # Health check endpoint
 @api_router.get("/")
 async def root():
-    return {"message": "codeNest API is running", "status": "healthy"}
+    return {"message": "Aeterna stacK API is running", "status": "healthy"}
 
 # Include feature routers
 api_router.include_router(projects.router, tags=["projects"])
