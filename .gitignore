@@ -33,8 +33,9 @@ dist
 # Environment files (comprehensive coverage)
 # env files
 .env
-backend/.env
-frontend/.env
+
+codeNest/frontend/.env
+codeNest/backend/.env
 
 *token.json*
 *credentials.json*
