@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send, CheckCircle2 } from 'lucide-react';
+import {Wrench,Hammer, Mail, Send, CheckCircle2, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -75,18 +75,31 @@ const Contact = () => {
             <div className="bg-[#1a1f2e] rounded-2xl p-8 border border-[#00d9ff]/20">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="w-12 h-12 bg-[#00d9ff]/10 rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-[#00d9ff]" />
+                  <Hammer className="w-6 h-6 text-[#00d9ff]" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">Email</h3>
-                  <p className="text-gray-400 text-sm">Send me a message</p>
+                  <h3 className="text-white font-semibold">Let’s Build Something 🚀</h3>
+                  <p className="text-gray-400 text-sm">Have a project in mind? Let’s turn your idea into reality.</p>
                 </div>
               </div>
               <a
                 href={`mailto:${contact.email}`}
-                className="text-[#00d9ff] hover:text-[#00bfe6] transition-colors duration-200 break-all"
+                className="text-[#00d9ff] hover:text-[#00ffc8] transition-colors duration-200 break-all flex items-center gap-2 cursor-pointer"
               >
-                {contact.email}
+                <Mail className="w-5 h-5 flex-shrink-0" />
+                <span>
+                  {contact.email}
+                </span>
+              </a> 
+              <br/>
+              <a
+                href={`https://wa.me/${contact.phone.replace(/[^0-9]/g, '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00d9ff] hover:text-[#00ffc8] transition-colors duration-200 break-all flex items-center gap-2 cursor-pointer"
+              >
+                <MessageCircle className="w-5 h-5 flex-shrink-0" />
+                {contact.phone}
               </a>
             </div>
 

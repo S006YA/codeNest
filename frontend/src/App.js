@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AdminMessages from './components/AdminMessages';
 import { Toaster } from './components/ui/toaster';
 import './App.css';
 
@@ -30,6 +31,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/admin/messages" element={<AdminMessages />} />
         </Routes>
       </BrowserRouter>
       <Toaster />

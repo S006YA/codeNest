@@ -118,7 +118,8 @@ export const mockData = {
     }
   ],
   contact: {
-    email: "guyzamazing38@gmail.com",
+    email: "sooryacr07@gmail.com",
+    phone:"6282783428",
     title: "Let's Work Together",
     description: "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!"
   }

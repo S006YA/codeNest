@@ -15,7 +15,20 @@ const Skills = () => {
   const fetchSkills = async () => {
     try {
       const response = await axios.get(`${API}/skills`);
-      setSkills(response.data);
+      
+      // Define the order of skill categories (Frontend first)
+      const categoryOrder = ['Frontend', 'Backend', 'Tools', 'Database'];
+      
+      // Sort skills based on the custom order
+      const sortedSkills = response.data.sort((a, b) => {
+        const indexA = categoryOrder.indexOf(a.category);
+        const indexB = categoryOrder.indexOf(b.category);
+        
+        // If category is not in the list, put it at the end
+        return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
+      });
+      
+      setSkills(sortedSkills);
     } catch (error) {
       console.error('Error fetching skills:', error);
     } finally {

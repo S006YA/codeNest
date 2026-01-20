@@ -5,6 +5,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
+import ssl
 
 # Import routes
 from routes import projects, contact, skills
@@ -13,9 +14,18 @@ from routes import projects, contact, skills
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-# MongoDB connection
+# MongoDB connection with SSL context
 mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
+ssl_context = ssl.create_default_context()
+ssl_context.check_hostname = True
+ssl_context.verify_mode = ssl.CERT_REQUIRED
+
+client = AsyncIOMotorClient(
+    mongo_url,
+    tlsCAFile=None,  # Use system CA certificates
+    serverSelectionTimeoutMS=5000,
+    connectTimeoutMS=10000
+)
 db = client[os.environ['DB_NAME']]
 
 # Create the main app without a prefix
